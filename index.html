@@ -1,44 +1,1012 @@
 <!DOCTYPE html>
+<!--
+  ============================================================================
+  SCST1133 DATA ENGINEERING E-PORTFOLIO
+  ============================================================================
+  HOW TO EDIT THIS FILE (full guide in README.md)
+
+  * Search for  [Edit:  to find every place that needs your own words.
+    Green-tinted boxes (class="ph") are placeholders: replace the text, then
+    delete class="ph" if you want the plain style.
+  * Search for  TODO  to find links and images you must replace.
+  * Search for  YOUR  to find name / GitHub / LinkedIn placeholders.
+  * Artifact cards:  copy a whole <article class="artifact"> block to add one.
+  * Never write something you did not do. Leave a placeholder instead.
+  ============================================================================
+-->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My SCST1133 E-Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- TODO: replace [YOUR FULL NAME] in the title and description -->
+  <title>[YOUR FULL NAME] | SCST1133 Data Engineering E-Portfolio</title>
+  <meta name="description" content="SCST1133 Data Engineering Ecosystem learning portfolio by [YOUR FULL NAME], first-year Computer Science (Data Engineering) student, Universiti Teknologi Malaysia.">
+  <meta name="theme-color" content="#14243A">
+
+  <!-- Inter font (free, SIL Open Font License). If offline, the page falls back to system fonts. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+
+  <!-- Relative paths: these work on a GitHub Pages project URL -->
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
 </head>
+
 <body>
-  <header>
-    <h1>Your Name</h1>
-    <p>SCST1133 Data Engineering Ecosystem</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#work">Selected Work</a>
-      <a href="#reflection">Reflection</a>
-    </nav>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===================== HEADER / NAVIGATION ===================== -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="#home" aria-label="Home">
+        <!-- TODO: replace with your name -->
+        [YOUR NAME] <small>SCST1133 e-Portfolio</small>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#journey">Learning Journey</a></li>
+          <li><a href="#work">Selected Work</a></li>
+          <li><a href="#reflection">Reflection</a></li>
+          <li><a href="#summary">Summary</a></li>
+          <li><a href="#sources">Sources</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section id="about">
-      <h2>Professional Profile</h2>
-      <p>Write a short professional introduction here.</p>
+  <main id="main">
+
+    <!-- ============================================================
+         SECTION A — HOME AND PROFESSIONAL PROFILE
+         ============================================================ -->
+    <section class="hero" id="home" aria-labelledby="home-title">
+      <div class="container">
+        <div class="hero__grid">
+
+          <div class="hero__text">
+            <div class="hero__inst">
+              <!-- TODO: save the OFFICIAL logo as assets/utm-fc-logo.png (see assets/README.txt).
+                   Only the height is set in CSS so the proportions and colours stay unchanged. -->
+              <img src="assets/utm-fc-logo.png" alt="Universiti Teknologi Malaysia, Faculty of Computing logo"
+                   data-fallback-text="UTM Faculty of Computing logo (add official file: assets/utm-fc-logo.png)">
+              <p>Faculty of Computing<br>Universiti Teknologi Malaysia (UTM)</p>
+            </div>
+
+            <p class="eyebrow">SCST1133 Data Engineering Ecosystem</p>
+            <h1 id="home-title">[YOUR FULL NAME]</h1>
+            <p class="hero__headline">First-Year Computer Science Student | Data Engineering</p>
+
+            <!-- [Edit: rewrite this introduction in your own voice. Keep it short and true.] -->
+            <p class="hero__intro">
+              I am a first-year Computer Science student specialising in Data Engineering at Universiti Teknologi Malaysia.
+              I am interested in how data travels from its source to the people who rely on it, and in building reliable,
+              responsible data-driven solutions. This portfolio records what I learn in SCST1133, the work I produce, and
+              how my understanding develops.
+            </p>
+
+            <div class="hero__links">
+              <a class="btn btn--primary" href="#journey">
+                Explore My Learning Journey
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+              </a>
+              <!-- TODO: replace YOUR-USERNAME with your GitHub username -->
+              <a class="btn btn--ghost" href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+                GitHub<span class="visually-hidden"> (opens in a new tab)</span>
+              </a>
+              <!-- OPTIONAL: LinkedIn. Replace the URL, or delete this whole <a> if you have no profile. -->
+              <a class="btn btn--ghost" href="https://www.linkedin.com/in/YOUR-LINKEDIN-ID" target="_blank" rel="noopener">
+                LinkedIn<span class="visually-hidden"> (opens in a new tab)</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero__photo">
+            <!-- TODO: save your photo as images/profile-photo.jpg (portrait, about 800x1000). Until then the placeholder shows. -->
+            <img src="images/profile-photo.jpg" data-fallback="images/profile-placeholder.svg"
+                 alt="Profile photo of [YOUR FULL NAME]" width="400" height="500">
+          </div>
+
+        </div>
+
+        <!-- Compact profile overview. List only things that are true and that you can show. -->
+        <div class="overview" aria-label="Profile overview">
+          <div>
+            <h3>Education</h3>
+            <p><strong>Computer Science (Data Engineering)</strong></p>
+            <p>Faculty of Computing, Universiti Teknologi Malaysia</p>
+            <p class="ph">[Edit: year / intake, e.g. Year 1, Semester 1, 2026/2027]</p>
+          </div>
+          <div>
+            <h3>Relevant skills</h3>
+            <ul class="ph" style="list-style:none; padding-left: var(--s4);">
+              <li>[Edit: a skill you have actually used in coursework]</li>
+              <li>[Edit: another skill, with the tool, e.g. Figma]</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Interests</h3>
+            <ul class="ph" style="list-style:none; padding-left: var(--s4);">
+              <li>[Edit: e.g. an area of data engineering you want to understand better]</li>
+              <li>[Edit: another interest]</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Current learning goals</h3>
+            <ul class="ph" style="list-style:none; padding-left: var(--s4);">
+              <li>[Edit: a specific goal for this semester]</li>
+              <li>[Edit: a skill you want to build next]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="work">
-      <h2>Selected Work</h2>
-      <article>
-        <h3>Design Thinking and Figma</h3>
-        <img src="images/project-screenshot.png"
-             alt="Screenshot of my Figma prototype">
-        <p>Explain the artifact and your contribution.</p>
-      </article>
+    <!-- ============================================================
+         SECTION B — LEARNING JOURNEY
+         ============================================================ -->
+    <section class="section section--white" id="journey" aria-labelledby="journey-title">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Section B</p>
+          <h2 id="journey-title">Learning Journey</h2>
+          <p>Six themes from SCST1133, in the order they build on each other. Open a theme to see what I learned, the evidence behind it, and how it connects to the rest of the course.</p>
+        </div>
+
+        <!-- Simplified lifecycle diagram (HTML/CSS so it stays readable on phones) -->
+        <div class="pipeline-wrap">
+          <h3>How the themes fit together: a simplified data pipeline</h3>
+          <ol class="pipeline">
+            <li>Acquire <small>collect data from sources</small></li>
+            <li>Store <small>keep it organised and safe</small></li>
+            <li>Process <small>clean and transform</small></li>
+            <li>Serve <small>deliver to people and systems</small></li>
+          </ol>
+          <p class="pipeline-bar">Governance, data quality, privacy and ethics apply at every stage, not only at the end.</p>
+        </div>
+
+        <ol class="timeline">
+
+          <li>
+            <span class="timeline__node" aria-hidden="true">1</span>
+            <details class="topic">
+              <summary>
+                <h3>Computing foundations and digital tools</h3>
+                <p>How computers, operating systems, networks and everyday digital tools support work with data.</p>
+              </summary>
+              <div class="topic__body">
+                <div>
+                  <h4>What I learned</h4>
+                  <p class="ph">[Edit: 2–3 sentences in your own words about what this theme taught you.]</p>
+                </div>
+                <div>
+                  <h4>Key concepts and tools</h4>
+                  <p class="ph">[Edit: list the concepts and tools you actually met, e.g. hardware components, operating systems, networking basics, Git/GitHub.]</p>
+                </div>
+                <div>
+                  <h4>Supporting evidence</h4>
+                  <p class="ph">[Edit: name the coursework or activity, and link to it in Section C if it is there.]</p>
+                </div>
+                <div>
+                  <h4>Connection to other areas</h4>
+                  <p>Hardware, networks and software form the platforms every data pipeline runs on. Digital tools such as version control and documentation also support the teamwork described in later themes.</p>
+                </div>
+                <div class="full">
+                  <h4>Reflection on my progress</h4>
+                  <p class="ph">[Edit: where were you at the start, what is clearer now, what is still unclear?]</p>
+                </div>
+              </div>
+            </details>
+          </li>
+
+          <li>
+            <span class="timeline__node" aria-hidden="true">2</span>
+            <details class="topic">
+              <summary>
+                <h3>The data landscape and data engineering ecosystem</h3>
+                <p>The kinds of data that exist, where they come from, and the technologies built around them.</p>
+              </summary>
+              <div class="topic__body">
+                <div>
+                  <h4>What I learned</h4>
+                  <p class="ph">[Edit: 2–3 sentences in your own words.]</p>
+                </div>
+                <div>
+                  <h4>Key concepts and tools</h4>
+                  <p class="ph">[Edit: e.g. structured and unstructured data, data sources, storage and processing technologies you studied.]</p>
+                </div>
+                <div>
+                  <h4>Supporting evidence</h4>
+                  <p class="ph">[Edit: coursework, notes or artifact link.]</p>
+                </div>
+                <div>
+                  <h4>Connection to other areas</h4>
+                  <p>The variety, volume and speed of data explain why different storage and processing technologies exist, and they shape the choices made during the lifecycle.</p>
+                </div>
+                <div class="full">
+                  <h4>Reflection on my progress</h4>
+                  <p class="ph">[Edit: your reflection.]</p>
+                </div>
+              </div>
+            </details>
+          </li>
+
+          <li>
+            <span class="timeline__node" aria-hidden="true">3</span>
+            <details class="topic">
+              <summary>
+                <h3>Industry roles, technologies and collaboration</h3>
+                <p>Who works with data in organisations, which technologies they use, and how teams cooperate.</p>
+              </summary>
+              <div class="topic__body">
+                <div>
+                  <h4>What I learned</h4>
+                  <p class="ph">[Edit: 2–3 sentences in your own words.]</p>
+                </div>
+                <div>
+                  <h4>Key concepts and tools</h4>
+                  <p class="ph">[Edit: roles, technologies and practices mentioned in the Industry Talk and Industry Visit.]</p>
+                </div>
+                <div>
+                  <h4>Supporting evidence</h4>
+                  <p class="ph">[Edit: link to the Industry Talk and Industry Visit artifacts in Section C.]</p>
+                </div>
+                <div>
+                  <h4>Connection to other areas</h4>
+                  <p>Data roles depend on one another: pipelines that engineers build must deliver data that analysts and scientists can trust. Understanding this hand-off explains why acquisition quality and documentation matter.</p>
+                </div>
+                <div class="full">
+                  <h4>Reflection on my progress</h4>
+                  <p class="ph">[Edit: your reflection.]</p>
+                </div>
+              </div>
+            </details>
+          </li>
+
+          <li>
+            <span class="timeline__node" aria-hidden="true">4</span>
+            <details class="topic">
+              <summary>
+                <h3>The data engineering lifecycle and data acquisition</h3>
+                <p>The stages data passes through, and how data is collected from its sources.</p>
+              </summary>
+              <div class="topic__body">
+                <div>
+                  <h4>What I learned</h4>
+                  <p class="ph">[Edit: 2–3 sentences in your own words.]</p>
+                </div>
+                <div>
+                  <h4>Key concepts and tools</h4>
+                  <p class="ph">[Edit: lifecycle stages, collection methods and tools you used.]</p>
+                </div>
+                <div>
+                  <h4>Supporting evidence</h4>
+                  <p class="ph">[Edit: link to the Lifecycle Video and Data Acquisition artifacts in Section C.]</p>
+                </div>
+                <div>
+                  <h4>Connection to other areas</h4>
+                  <p>Errors introduced during collection are costly to fix later, so acquisition sets the ceiling for everything downstream. It is also where legal and ethical limits on data use first apply.</p>
+                </div>
+                <div class="full">
+                  <h4>Reflection on my progress</h4>
+                  <p class="ph">[Edit: your reflection.]</p>
+                </div>
+              </div>
+            </details>
+          </li>
+
+          <li>
+            <span class="timeline__node" aria-hidden="true">5</span>
+            <details class="topic">
+              <summary>
+                <h3>Data management, governance, ethics and responsible practice</h3>
+                <p>How data is kept accurate, secure and fair, and who is accountable for it.</p>
+              </summary>
+              <div class="topic__body">
+                <div>
+                  <h4>What I learned</h4>
+                  <p class="ph">[Edit: 2–3 sentences in your own words.]</p>
+                </div>
+                <div>
+                  <h4>Key concepts and tools</h4>
+                  <p class="ph">[Edit: e.g. data quality, privacy, governance, ethical principles, and any laws or guidelines covered.]</p>
+                </div>
+                <div>
+                  <h4>Supporting evidence</h4>
+                  <p class="ph">[Edit: where you applied this, e.g. data acquisition work or the prototype.]</p>
+                </div>
+                <div>
+                  <h4>Connection to other areas</h4>
+                  <p>Governance and ethics are not a final step. They limit how data is acquired, stored, processed and shared, so they influence every earlier theme.</p>
+                </div>
+                <div class="full">
+                  <h4>Reflection on my progress</h4>
+                  <p class="ph">[Edit: your reflection.]</p>
+                </div>
+              </div>
+            </details>
+          </li>
+
+          <li>
+            <span class="timeline__node" aria-hidden="true">6</span>
+            <details class="topic">
+              <summary>
+                <h3>Emerging technologies, innovation and design thinking</h3>
+                <p>New technologies, and a human-centred way of turning user needs into solutions.</p>
+              </summary>
+              <div class="topic__body">
+                <div>
+                  <h4>What I learned</h4>
+                  <p class="ph">[Edit: 2–3 sentences in your own words.]</p>
+                </div>
+                <div>
+                  <h4>Key concepts and tools</h4>
+                  <p class="ph">[Edit: design thinking stages, Figma features, emerging technologies discussed.]</p>
+                </div>
+                <div>
+                  <h4>Supporting evidence</h4>
+                  <p class="ph">[Edit: link to the Design Thinking and Figma artifact in Section C.]</p>
+                </div>
+                <div>
+                  <h4>Connection to other areas</h4>
+                  <p>Design thinking links user needs to the data a system must collect and present. New technologies change how pipelines are built, but the responsibilities from the previous theme still apply.</p>
+                </div>
+                <div class="full">
+                  <h4>Reflection on my progress</h4>
+                  <p class="ph">[Edit: your reflection.]</p>
+                </div>
+              </div>
+            </details>
+          </li>
+
+        </ol>
+      </div>
     </section>
 
-    <section id="reflection">
-      <h2>Course Reflection</h2>
-      <p>Explain what you learned and what you would improve.</p>
+    <!-- ============================================================
+         SECTION C — SELECTED WORK AND EVIDENCE
+         HOW TO ADD AN ARTIFACT: copy one <article class="artifact"> block below,
+         change the id, title, text, links and image names.
+         HOW TO MARK AS COMPLETE: change class "status--todo" to "status--done" and
+         the text "Placeholder" to "Complete"; remove aria-disabled and class
+         "is-disabled" from the link and put the real address in href.
+         CLO tags are suggestions. Change them to match what your work really shows.
+         ============================================================ -->
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Section C</p>
+          <h2 id="work-title">Selected Work and Evidence</h2>
+          <p>Course artifacts, each with its purpose, my contribution, the tools used and the learning outcome it supports. Items marked “Placeholder” have not been added yet.</p>
+        </div>
+
+        <div class="artifact-list">
+
+          <!-- 1. DESIGN THINKING AND FIGMA -->
+          <article class="artifact" id="work-figma" aria-labelledby="work-figma-title">
+            <div class="artifact__media">
+              <!-- TODO: save a screenshot as images/figma-thumbnail.png -->
+              <img src="images/figma-thumbnail.png" data-fallback="images/placeholder-artifact.svg"
+                   alt="Placeholder for a screenshot of the Figma prototype" loading="lazy" width="640" height="400">
+            </div>
+            <div class="artifact__body">
+              <div class="artifact__meta">
+                <span class="tag tag--clo">CLO3</span>
+                <span class="status status--todo">Placeholder: not yet added</span>
+              </div>
+              <h3 id="work-figma-title">Design Thinking and Figma Project</h3>
+              <p class="artifact__overview">A design thinking activity in which a problem is identified, an idea is developed and a prototype is built in Figma. It shows how user needs shape the data a system must collect and present.</p>
+              <dl class="facts">
+                <dt>My contribution</dt>
+                <dd class="ph">[Edit: what exactly you did. Be specific, and say what teammates did if it was a group task.]</dd>
+                <dt>Tools used</dt>
+                <dd class="ph">[Edit: Figma, and anything else you used.]</dd>
+                <dt>Evidence</dt>
+                <dd class="ph">[Edit: problem statement, screenshots, prototype link.]</dd>
+              </dl>
+              <div class="artifact__actions">
+                <!-- TODO: put the Figma / document link in href, then remove aria-disabled and is-disabled -->
+                <a class="btn btn--primary btn--small is-disabled" href="#" aria-disabled="true">View full artifact (link to be added)</a>
+                <a href="#reflection-figma">Read my reflection</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. INDUSTRY TALK -->
+          <article class="artifact" id="work-talk" aria-labelledby="work-talk-title">
+            <div class="artifact__media">
+              <!-- TODO: save a poster or notes screenshot as images/industry-talk-thumbnail.png -->
+              <img src="images/industry-talk-thumbnail.png" data-fallback="images/placeholder-artifact.svg"
+                   alt="Placeholder for the Industry Talk poster or notes" loading="lazy" width="640" height="400">
+            </div>
+            <div class="artifact__body">
+              <div class="artifact__meta">
+                <span class="tag tag--clo">CLO1</span>
+                <span class="status status--todo">Placeholder: not yet added</span>
+              </div>
+              <h3 id="work-talk-title">Industry Talk</h3>
+              <p class="artifact__overview">A talk from an industry speaker, documented through a poster, notes or report. Its purpose is to connect classroom concepts to how data work is done in practice.</p>
+              <dl class="facts">
+                <dt>My contribution</dt>
+                <dd class="ph">[Edit: speaker and topic, and what you produced, e.g. poster, notes, report.]</dd>
+                <dt>Tools used</dt>
+                <dd class="ph">[Edit: e.g. Canva, Word, or none.]</dd>
+                <dt>Evidence</dt>
+                <dd class="ph">[Edit: poster / report and the key lessons.]</dd>
+              </dl>
+              <div class="artifact__actions">
+                <a class="btn btn--primary btn--small is-disabled" href="#" aria-disabled="true">View full artifact (link to be added)</a>
+                <a href="#reflection-talk">Read my reflection</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. INDUSTRY VISIT -->
+          <article class="artifact" id="work-visit" aria-labelledby="work-visit-title">
+            <div class="artifact__media">
+              <!-- TODO: save an approved photo as images/industry-visit-thumbnail.png (only photos you have permission to publish) -->
+              <img src="images/industry-visit-thumbnail.png" data-fallback="images/placeholder-artifact.svg"
+                   alt="Placeholder for evidence from the Industry Visit" loading="lazy" width="640" height="400">
+            </div>
+            <div class="artifact__body">
+              <div class="artifact__meta">
+                <span class="tag tag--clo">CLO1</span>
+                <span class="status status--todo">Placeholder: not yet added</span>
+              </div>
+              <h3 id="work-visit-title">Industry Visit</h3>
+              <p class="artifact__overview">A visit to an organisation to observe how data, systems and teams work together. Its purpose is to see the data ecosystem as a whole rather than as separate tools.</p>
+              <dl class="facts">
+                <dt>My contribution</dt>
+                <dd class="ph">[Edit: organisation visited, observations you recorded, report or video you made.]</dd>
+                <dt>Tools used</dt>
+                <dd class="ph">[Edit: e.g. video editor, document tool.]</dd>
+                <dt>Evidence</dt>
+                <dd class="ph">[Edit: approved photographs, report, observations. Do not publish anything you lack permission for.]</dd>
+              </dl>
+              <div class="artifact__actions">
+                <a class="btn btn--primary btn--small is-disabled" href="#" aria-disabled="true">View full artifact (link to be added)</a>
+                <a href="#reflection-visit">Read my reflection</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. DATA ENGINEERING LIFECYCLE VIDEO -->
+          <article class="artifact" id="work-video" aria-labelledby="work-video-title">
+            <div class="artifact__media">
+              <!-- TODO: save a video frame or storyboard as images/lifecycle-video-thumbnail.png -->
+              <img src="images/lifecycle-video-thumbnail.png" data-fallback="images/placeholder-artifact.svg"
+                   alt="Placeholder for a frame or storyboard from the lifecycle video" loading="lazy" width="640" height="400">
+            </div>
+            <div class="artifact__body">
+              <div class="artifact__meta">
+                <span class="tag tag--clo">CLO2</span>
+                <span class="status status--todo">Placeholder: not yet added</span>
+              </div>
+              <h3 id="work-video-title">Data Engineering Lifecycle Video</h3>
+              <p class="artifact__overview">A video explaining the stages of the data engineering lifecycle and the decisions made at each stage. Its purpose is to show how the stages connect.</p>
+              <dl class="facts">
+                <dt>My contribution</dt>
+                <dd class="ph">[Edit: your part, e.g. script, narration, editing, diagrams.]</dd>
+                <dt>Tools used</dt>
+                <dd class="ph">[Edit: video editor, slides, recording tools.]</dd>
+                <dt>Evidence</dt>
+                <dd class="ph">[Edit: video link (e.g. YouTube, unlisted is fine), storyboard or slides.]</dd>
+              </dl>
+              <div class="artifact__actions">
+                <a class="btn btn--primary btn--small is-disabled" href="#" aria-disabled="true">Watch / view full artifact (link to be added)</a>
+                <a href="#reflection-video">Read my reflection</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. DATA ACQUISITION WORK -->
+          <article class="artifact" id="work-acquisition" aria-labelledby="work-acquisition-title">
+            <div class="artifact__media">
+              <!-- TODO: save a screenshot as images/data-acquisition-thumbnail.png -->
+              <img src="images/data-acquisition-thumbnail.png" data-fallback="images/placeholder-artifact.svg"
+                   alt="Placeholder for a screenshot of the data acquisition work" loading="lazy" width="640" height="400">
+            </div>
+            <div class="artifact__body">
+              <div class="artifact__meta">
+                <span class="tag tag--clo">CLO2</span>
+                <span class="status status--todo">Placeholder: not yet added</span>
+              </div>
+              <h3 id="work-acquisition-title">Data Acquisition Work</h3>
+              <p class="artifact__overview">Work that collects data from a chosen source, using a stated method and tools, and considers data quality. Its purpose is to practise the first stage of the lifecycle responsibly.</p>
+              <dl class="facts">
+                <dt>My contribution</dt>
+                <dd class="ph">[Edit: dataset or source, collection method, what you produced.]</dd>
+                <dt>Tools used</dt>
+                <dd class="ph">[Edit: e.g. spreadsheet, Python, forms, scraping tools. Only what you used.]</dd>
+                <dt>Evidence</dt>
+                <dd class="ph">[Edit: data quality considerations, output, repository or file link. Check the data licence and privacy first.]</dd>
+              </dl>
+              <div class="artifact__actions">
+                <a class="btn btn--primary btn--small is-disabled" href="#" aria-disabled="true">View full artifact (link to be added)</a>
+                <a href="#reflection-acquisition">Read my reflection</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. PRESENTATIONS AND OTHER COURSEWORK -->
+          <article class="artifact" id="work-other" aria-labelledby="work-other-title">
+            <div class="artifact__media">
+              <!-- TODO: save a slide or screenshot as images/presentation-thumbnail.png -->
+              <img src="images/presentation-thumbnail.png" data-fallback="images/placeholder-artifact.svg"
+                   alt="Placeholder for a slide or screenshot from the presentation or other coursework" loading="lazy" width="640" height="400">
+            </div>
+            <div class="artifact__body">
+              <div class="artifact__meta">
+                <span class="tag tag--clo">CLO3</span>
+                <span class="status status--todo">Placeholder: not yet added</span>
+              </div>
+              <h3 id="work-other-title">Presentations and Other Selected Coursework</h3>
+              <p class="artifact__overview">Slides, demonstrations or other course activities that show the prototype or the ecosystem and lifecycle as a whole, including ethical and professional considerations.</p>
+              <dl class="facts">
+                <dt>My contribution</dt>
+                <dd class="ph">[Edit: what the work was and what you did.]</dd>
+                <dt>Tools used</dt>
+                <dd class="ph">[Edit: e.g. PowerPoint, Google Slides, other tools.]</dd>
+                <dt>Evidence</dt>
+                <dd class="ph">[Edit: slides, demonstration, results, or a link to externally hosted work.]</dd>
+              </dl>
+              <div class="artifact__actions">
+                <a class="btn btn--primary btn--small is-disabled" href="#" aria-disabled="true">View full artifact (link to be added)</a>
+                <a href="#reflection-other">Read my reflection</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
     </section>
+
+    <!-- ============================================================
+         SECTION D — REFLECTION ON ARTIFACTS
+         Each reflection answers five questions. The grey line is a guiding
+         question. Replace the green placeholder with your own paragraph
+         (2–4 sentences, specific to YOUR experience).
+         ============================================================ -->
+    <section class="section section--white" id="reflection" aria-labelledby="reflection-title">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Section D</p>
+          <h2 id="reflection-title">Reflection on Artifacts</h2>
+          <p>Each reflection explains what I made and why, what I learned, one challenge or decision, how it connects to a course concept or outcome, and what I would improve next.</p>
+        </div>
+
+        <nav class="reflection-nav" aria-label="Jump to a reflection">
+          <a href="#reflection-figma">Design Thinking and Figma</a>
+          <a href="#reflection-talk">Industry Talk</a>
+          <a href="#reflection-visit">Industry Visit</a>
+          <a href="#reflection-video">Lifecycle Video</a>
+          <a href="#reflection-acquisition">Data Acquisition</a>
+          <a href="#reflection-other">Presentations and Other</a>
+        </nav>
+
+        <!-- ---------- Reflection 1: Figma ---------- -->
+        <article class="reflection" id="reflection-figma" aria-labelledby="reflection-figma-title">
+          <header class="reflection__head">
+            <h3 id="reflection-figma-title">Design Thinking and Figma Project</h3>
+            <span><span class="tag tag--clo">CLO3</span> <a href="#work-figma">View artifact</a></span>
+          </header>
+          <div class="reflection__row">
+            <h4><span>1</span>Purpose</h4>
+            <div>
+              <p class="prompt">What problem did I choose, who was it for, and what was the prototype meant to show?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+            </div>
+          </div>
+          <div class="reflection__row">
+            <h4><span>2</span>Learning</h4>
+            <div>
+              <p class="prompt">Which design thinking stage taught me the most? How did building in Figma change my idea?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+            </div>
+          </div>
+          <div class="reflection__row">
+            <h4><span>3</span>Challenge and decision</h4>
+            <div>
+              <p class="prompt">Which user need or limitation forced a decision, and what did I give up in making it?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+            </div>
+          </div>
+          <div class="reflection__row">
+            <h4><span>4</span>Application</h4>
+            <div>
+              <p class="prompt">What data would this application need to collect or produce, and how would a pipeline, storage and privacy rules support it (systems thinking)?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+            </div>
+          </div>
+          <div class="reflection__row">
+            <h4><span>5</span>Improvement</h4>
+            <div>
+              <p class="prompt">What would I test with real users next, and what evidence would show whether the design works?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+              <blockquote class="insight">[Edit (optional): one key insight, in a sentence.]</blockquote>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---------- Reflection 2: Industry Talk ---------- -->
+        <article class="reflection" id="reflection-talk" aria-labelledby="reflection-talk-title">
+          <header class="reflection__head">
+            <h3 id="reflection-talk-title">Industry Talk</h3>
+            <span><span class="tag tag--clo">CLO1</span> <a href="#work-talk">View artifact</a></span>
+          </header>
+          <div class="reflection__row">
+            <h4><span>1</span>Purpose</h4>
+            <div>
+              <p class="prompt">Who spoke, on what topic, and why did I document it the way I did?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+            </div>
+          </div>
+          <div class="reflection__row">
+            <h4><span>2</span>Learning</h4>
+            <div>
+              <p class="prompt">Which roles, technologies or practices did I learn about that I had not understood from lectures alone?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+            </div>
+          </div>
+          <div class="reflection__row">
+            <h4><span>3</span>Challenge and decision</h4>
+            <div>
+              <p class="prompt">Where did the speaker's experience differ from what I expected, and how did I decide what mattered most?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+            </div>
+          </div>
+          <div class="reflection__row">
+            <h4><span>4</span>Application</h4>
+            <div>
+              <p class="prompt">How does the talk illustrate the roles and collaboration within the data engineering ecosystem (CLO1)?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+            </div>
+          </div>
+          <div class="reflection__row">
+            <h4><span>5</span>Improvement</h4>
+            <div>
+              <p class="prompt">Which questions would I ask next time, and which skills should I build as a result?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+              <blockquote class="insight">[Edit (optional): one key insight, in a sentence.]</blockquote>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---------- Reflection 3: Industry Visit ---------- -->
+        <article class="reflection" id="reflection-visit" aria-labelledby="reflection-visit-title">
+          <header class="reflection__head">
+            <h3 id="reflection-visit-title">Industry Visit</h3>
+            <span><span class="tag tag--clo">CLO1</span> <a href="#work-visit">View artifact</a></span>
+          </header>
+          <div class="reflection__row">
+            <h4><span>1</span>Purpose</h4>
+            <div>
+              <p class="prompt">Which organisation did I visit, what did I want to observe, and what did I produce?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+            </div>
+          </div>
+          <div class="reflection__row">
+            <h4><span>2</span>Learning</h4>
+            <div>
+              <p class="prompt">How did I see data, systems and people working together in practice?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+            </div>
+          </div>
+          <div class="reflection__row">
+            <h4><span>3</span>Challenge and decision</h4>
+            <div>
+              <p class="prompt">What was hard to observe or understand in a short visit, and how did I decide what to record?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+            </div>
+          </div>
+          <div class="reflection__row">
+            <h4><span>4</span>Application</h4>
+            <div>
+              <p class="prompt">Which parts of what I saw can be described as components of a system (inputs, processes, outputs, people), as in CLO1?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+            </div>
+          </div>
+          <div class="reflection__row">
+            <h4><span>5</span>Improvement</h4>
+            <div>
+              <p class="prompt">What would I prepare, ask or record differently on another visit?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+              <blockquote class="insight">[Edit (optional): one key insight, in a sentence.]</blockquote>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---------- Reflection 4: Lifecycle Video ---------- -->
+        <article class="reflection" id="reflection-video" aria-labelledby="reflection-video-title">
+          <header class="reflection__head">
+            <h3 id="reflection-video-title">Data Engineering Lifecycle Video</h3>
+            <span><span class="tag tag--clo">CLO2</span> <a href="#work-video">View artifact</a></span>
+          </header>
+          <div class="reflection__row">
+            <h4><span>1</span>Purpose</h4>
+            <div>
+              <p class="prompt">What did the video explain, to whom, and why did I choose this approach?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+            </div>
+          </div>
+          <div class="reflection__row">
+            <h4><span>2</span>Learning</h4>
+            <div>
+              <p class="prompt">How do the lifecycle stages depend on each other, and what did explaining them teach me?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+            </div>
+          </div>
+          <div class="reflection__row">
+            <h4><span>3</span>Challenge and decision</h4>
+            <div>
+              <p class="prompt">Which concept was hardest to explain briefly (for example where data validation should happen), and what did I decide?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+            </div>
+          </div>
+          <div class="reflection__row">
+            <h4><span>4</span>Application</h4>
+            <div>
+              <p class="prompt">How does the video show a basic lifecycle built with appropriate technologies and practices (CLO2)?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+            </div>
+          </div>
+          <div class="reflection__row">
+            <h4><span>5</span>Improvement</h4>
+            <div>
+              <p class="prompt">What example or demonstration would make the explanation clearer if I remade it?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+              <blockquote class="insight">[Edit (optional): one key insight, in a sentence.]</blockquote>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---------- Reflection 5: Data Acquisition ---------- -->
+        <article class="reflection" id="reflection-acquisition" aria-labelledby="reflection-acquisition-title">
+          <header class="reflection__head">
+            <h3 id="reflection-acquisition-title">Data Acquisition Work</h3>
+            <span><span class="tag tag--clo">CLO2</span> <a href="#work-acquisition">View artifact</a></span>
+          </header>
+          <div class="reflection__row">
+            <h4><span>1</span>Purpose</h4>
+            <div>
+              <p class="prompt">What data did I collect, from where, by what method, and why?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+            </div>
+          </div>
+          <div class="reflection__row">
+            <h4><span>2</span>Learning</h4>
+            <div>
+              <p class="prompt">What did I learn about sources, formats and data quality (for example accuracy, completeness, consistency, timeliness)?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+            </div>
+          </div>
+          <div class="reflection__row">
+            <h4><span>3</span>Challenge and decision</h4>
+            <div>
+              <p class="prompt">What quality, licensing or privacy issue did I meet, and how did I handle it?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+            </div>
+          </div>
+          <div class="reflection__row">
+            <h4><span>4</span>Application</h4>
+            <div>
+              <p class="prompt">How does this work demonstrate the acquisition stage of the lifecycle (CLO2) and responsible data use (CLO3)?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+            </div>
+          </div>
+          <div class="reflection__row">
+            <h4><span>5</span>Improvement</h4>
+            <div>
+              <p class="prompt">What checks, documentation or automation would I add next?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+              <blockquote class="insight">[Edit (optional): one key insight, in a sentence.]</blockquote>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---------- Reflection 6: Presentations and other ---------- -->
+        <article class="reflection" id="reflection-other" aria-labelledby="reflection-other-title">
+          <header class="reflection__head">
+            <h3 id="reflection-other-title">Presentations and Other Selected Coursework</h3>
+            <span><span class="tag tag--clo">CLO3</span> <a href="#work-other">View artifact</a></span>
+          </header>
+          <div class="reflection__row">
+            <h4><span>1</span>Purpose</h4>
+            <div>
+              <p class="prompt">What was the task, what did I contribute, and what was it meant to show?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+            </div>
+          </div>
+          <div class="reflection__row">
+            <h4><span>2</span>Learning</h4>
+            <div>
+              <p class="prompt">What did I learn about the topic, the tools or communicating technical ideas?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+            </div>
+          </div>
+          <div class="reflection__row">
+            <h4><span>3</span>Challenge and decision</h4>
+            <div>
+              <p class="prompt">What limitation or decision shaped the result, and how did I respond?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+            </div>
+          </div>
+          <div class="reflection__row">
+            <h4><span>4</span>Application</h4>
+            <div>
+              <p class="prompt">How does it address the ecosystem and lifecycle together with ethical and professional responsibility (CLO3)?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+            </div>
+          </div>
+          <div class="reflection__row">
+            <h4><span>5</span>Improvement</h4>
+            <div>
+              <p class="prompt">What would I change or investigate next?</p>
+              <p class="ph">[Edit: write your own answer.]</p>
+              <blockquote class="insight">[Edit (optional): one key insight, in a sentence.]</blockquote>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION E — COURSE LEARNING SUMMARY
+         ============================================================ -->
+    <section class="section" id="summary" aria-labelledby="summary-title">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Section E</p>
+          <h2 id="summary-title">Course Learning Summary</h2>
+          <p>A look back across SCST1133: what I understand now, what skills I have built, and where I want to grow.</p>
+        </div>
+
+        <div class="summary-grid">
+          <div class="summary-item">
+            <h3>Computing foundations and data engineering</h3>
+            <p class="ph">[Edit: what you now understand about computing foundations and what data engineering is.]</p>
+          </div>
+          <div class="summary-item">
+            <h3>The ecosystem and the lifecycle</h3>
+            <p class="ph">[Edit: how you now understand the ecosystem (roles, technologies) and the lifecycle (stages).]</p>
+          </div>
+          <div class="summary-item">
+            <h3>Technical skills and professional practice</h3>
+            <p class="ph">[Edit: skills and practices you have actually developed, each with the work that shows it.]</p>
+          </div>
+          <div class="summary-item">
+            <h3>Quality, governance, privacy and ethics</h3>
+            <p class="ph">[Edit: your understanding of data quality, governance, privacy, ethics and responsible use.]</p>
+          </div>
+          <div class="summary-item">
+            <h3>How the course changed my perspective</h3>
+            <p class="ph">[Edit: what you believed before, and what you think now.]</p>
+          </div>
+          <div class="summary-item">
+            <h3>Areas to explore or improve</h3>
+            <p class="ph">[Edit: specific next steps, e.g. a tool to learn or a topic to study.]</p>
+          </div>
+        </div>
+
+        <h3 style="margin-bottom: var(--s4);">Course learning outcomes and my evidence</h3>
+        <div class="clo-grid">
+          <article class="clo">
+            <h3><span>CLO1 · EXPLAIN</span>Information technology concepts and systems thinking</h3>
+            <p>Explain basic information technology concepts and their role in data-driven systems using systems thinking.</p>
+            <p class="ph">[Edit: how your actual work demonstrates this outcome.]</p>
+            <a href="#work-talk">Industry Talk</a>
+            <a href="#work-visit">Industry Visit</a>
+            <p class="evidence-note">Suggested evidence. Keep only what truly supports this outcome.</p>
+          </article>
+          <article class="clo">
+            <h3><span>CLO2 · CONSTRUCT</span>A basic data engineering lifecycle</h3>
+            <p>Construct a basic data engineering lifecycle using appropriate technologies, practices and industry standards.</p>
+            <p class="ph">[Edit: how your actual work demonstrates this outcome.]</p>
+            <a href="#work-video">Lifecycle Video</a>
+            <a href="#work-acquisition">Data Acquisition</a>
+            <p class="evidence-note">Suggested evidence. Keep only what truly supports this outcome.</p>
+          </article>
+          <article class="clo">
+            <h3><span>CLO3 · DEVELOP</span>A prototype with ethics and responsibility</h3>
+            <p>Develop a prototype that addresses the data engineering ecosystem and lifecycle while demonstrating ethical principles and professional responsibility.</p>
+            <p class="ph">[Edit: how your actual work demonstrates this outcome.]</p>
+            <a href="#work-figma">Design Thinking and Figma</a>
+            <a href="#work-other">Presentations and Other</a>
+            <p class="evidence-note">Suggested evidence. Keep only what truly supports this outcome.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION F — SOURCES AND ACKNOWLEDGEMENTS
+         Only list sources you really used. Delete the green example
+         lines once you have added your own.
+         ============================================================ -->
+    <section class="section section--white" id="sources" aria-labelledby="sources-title">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Section F</p>
+          <h2 id="sources-title">Sources and Acknowledgements</h2>
+          <p>Credit for the materials, data, images, code and tools behind this portfolio.</p>
+        </div>
+
+        <div class="source-grid">
+
+          <div class="source-group">
+            <h3>Course materials and learning resources</h3>
+            <ul>
+              <li><a href="https://drshahizan.github.io/scst1133/index.html" target="_blank" rel="noopener">SCST1133 Data Engineering Ecosystem course website<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+              <li><a href="https://drshahizan.github.io/scst1133/assessments/eportfolio.html" target="_blank" rel="noopener">SCST1133 Data Engineering E-Portfolio assignment guidelines<span class="visually-hidden"> (opens in a new tab)</span></a>, used for the required sections and rubric</li>
+            </ul>
+            <p class="ph" style="margin-top: var(--s3);">[Edit: add lecture notes, tutorials or other course resources you used.]</p>
+          </div>
+
+          <div class="source-group">
+            <h3>External articles, datasets and research</h3>
+            <p class="ph">[Edit: title, author or organisation, date, link and licence. Example format: “Dataset name”, Publisher, Year. URL.]</p>
+          </div>
+
+          <div class="source-group">
+            <h3>Images, icons, diagrams and design assets</h3>
+            <ul>
+              <li>UTM Faculty of Computing logo: official asset, used unchanged. <span class="ph" style="display:inline;">[Edit: add the source of your copy.]</span></li>
+              <li>Page icons and the placeholder graphics in <code>images/</code> were drawn for this site as simple SVG.</li>
+            </ul>
+            <p class="ph" style="margin-top: var(--s3);">[Edit: credit every photo, screenshot and diagram that is not your own.]</p>
+          </div>
+
+          <div class="source-group">
+            <h3>Third-party code, libraries, templates and tools</h3>
+            <ul>
+              <li>Inter typeface by Rasmus Andersson, SIL Open Font License, served by Google Fonts.</li>
+              <li>HTML, CSS and JavaScript only. No frameworks or external libraries.</li>
+            </ul>
+            <p class="ph" style="margin-top: var(--s3);">[Edit: add Figma, editors, GitHub and any other tools you used.]</p>
+          </div>
+
+          <div class="source-group source-group--wide">
+            <h3>AI-assisted work</h3>
+            <p class="ph">
+              [Edit and confirm against the SCST1133 instructions before publishing.]
+              The starting structure and code of this website were drafted with the help of an AI assistant (Claude, by Anthropic) from a design brief that I wrote.
+              I then reviewed the result and wrote the content, reflections and evidence myself.
+              [Edit: state exactly what AI helped with, for example layout, code, proofreading or brainstorming, and what you did yourself. Delete anything that is not true.]
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer><p>© 2026 Your Name</p></footer>
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <strong>SCST1133 Data Engineering Ecosystem</strong>
+        <p>Learning portfolio · Faculty of Computing, Universiti Teknologi Malaysia (UTM)</p>
+        <p>© 2026 [YOUR FULL NAME]. Individual coursework.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#journey">Learning Journey</a></li>
+          <li><a href="#work">Selected Work</a></li>
+          <li><a href="#reflection">Reflection</a></li>
+          <li><a href="#summary">Summary</a></li>
+          <li><a href="#sources">Sources</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
 </body>
 </html>
